@@ -1,7 +1,6 @@
-from flask import Flask, jsonify
+from flask import Flask
+from routes import register_routes
 
 app = Flask(__name__)
 
-@app.route('/')
-def ping():
-    return jsonify({'status': 'pong'})
+register_routes(app)
